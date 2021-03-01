@@ -8,7 +8,12 @@ module.exports = {
   ],
   darkMode: 'class',
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: '#a7f3d0',
+        secondary: '#fef3c7',
+      },
+    },
   },
   variants: {
     extend: {},

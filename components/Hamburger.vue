@@ -2,13 +2,13 @@
   <div class="w-12 h-12 relative flex flex-center lg:hidden">
     <input
       id="menu"
-      v-model="isOpen"
       type="checkbox"
       class="w-full h-full absolute block rounded-full bg-secondary appearance-none cursor-pointer"
+      @change="toggle()"
     />
     <label for="menu" class="absolute block cursor-pointer">
       <transition name="fade" mode="out-in">
-        <MenuIcon v-if="isOpen === false" />
+        <MenuIcon v-if="this.$store.state.isOpen === false" />
         <MenuCloseIcon v-else />
       </transition>
     </label>
@@ -16,15 +16,16 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
 import MenuIcon from '../components/icons/MenuIcon'
 import MenuCloseIcon from '../components/icons/MenuCloseIcon'
 
 export default {
   components: { MenuIcon, MenuCloseIcon },
-  data() {
-    return {
-      isOpen: false,
-    }
+  methods: {
+    ...mapMutations({
+      toggle: 'toggle',
+    }),
   },
 }
 </script>

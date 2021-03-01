@@ -1,6 +1,6 @@
 <template>
   <header class="bg-primary h-24 fixed w-full top-0">
-    <div class="w-full h-full px-4 flex items-center justify-between">
+    <div class="w-full h-full px-4 lg:px-8 flex items-center justify-between">
       <h1 class="text-white text-2xl font-extralight tracking-widest">
         nkthkr portfolio.
       </h1>

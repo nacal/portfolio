@@ -32,17 +32,24 @@ export default {
 </script>
 
 <style lang="postcss">
+html {
+  scroll-behavior: smooth;
+}
+
 .container {
   @apply mx-auto max-w-container;
 }
 
 .section {
-  min-height: calc(100vh - 6rem);
-  @apply py-16 border-b border-secondary;
+  @apply min-h-screen pt-32 pb-16 -mt-24 border-b border-secondary;
 }
 
 .flex-center {
   @apply items-center justify-center;
+}
+
+.h-main {
+  height: calc(100vh - 6rem);
 }
 
 .fade-enter-active,

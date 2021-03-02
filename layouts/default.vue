@@ -32,6 +32,15 @@ export default {
 </script>
 
 <style lang="postcss">
+.container {
+  @apply mx-auto;
+}
+
+.section {
+  min-height: calc(100vh - 6rem);
+  @apply py-24 flex flex-col justify-center items-center text-center;
+}
+
 .flex-center {
   @apply items-center justify-center;
 }

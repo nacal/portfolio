@@ -1,23 +1,15 @@
 <template>
   <div class="container">
-    <h1 class="font-bold text-3xl">Hello World.</h1>
-    <ScrollDown />
+    <Hero />
   </div>
 </template>
 
 <script>
-import ScrollDown from '@/components/atoms/ScrollDown'
+import Hero from '@/components/templates/Hero'
 
 export default {
   components: {
-    ScrollDown,
+    Hero,
   },
 }
 </script>
-
-<style lang="postcss">
-.container {
-  min-height: calc(100vh - 6rem);
-  @apply flex flex-col justify-center items-center text-center mx-auto;
-}
-</style>

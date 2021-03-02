@@ -23,6 +23,7 @@
         </li>
       </ul>
       <p class="mt-24 text-xl font-bold">Thanks for watching.</p>
+      <ScrollUp />
     </div>
   </section>
 </template>
@@ -32,6 +33,7 @@ import Title from '@/components/atoms/Title'
 import TwitterIcon from '@/components/icons/TwitterIcon'
 import GitHubIcon from '@/components/icons/GitHubIcon'
 import NKTechIcon from '@/components/icons/NKTechIcon'
+import ScrollUp from '@/components/atoms/ScrollUp'
 
 export default {
   components: {
@@ -39,6 +41,7 @@ export default {
     TwitterIcon,
     GitHubIcon,
     NKTechIcon,
+    ScrollUp,
   },
   data() {
     return {

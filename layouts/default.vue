@@ -1,12 +1,12 @@
 <template>
   <div class="bg-base">
-    <Header class="z-10" />
+    <Header class="z-20" />
     <GlobalNav
-      class="transform lg:translate-x-0 transition duration-500 z-10"
+      class="transform lg:translate-x-0 transition duration-500 z-20"
       :class="[this.$store.state.isOpen ? 'translate-x-0' : 'translate-x-64']"
     />
     <transition name="fade">
-      <Overlay v-if="this.$store.state.isOpen" />
+      <Overlay v-if="this.$store.state.isOpen" class="z-10" />
     </transition>
     <main
       class="mt-24 lg:mr-64 transition duration-500"
@@ -41,7 +41,8 @@ html {
 }
 
 .section {
-  @apply min-h-screen pt-32 pb-16 -mt-24 border-b border-secondary;
+  min-height: calc(100vh - 6rem);
+  @apply py-16 border-b border-secondary;
 }
 
 .flex-center {

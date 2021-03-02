@@ -13,6 +13,7 @@ module.exports = {
         base: '#99B5AD',
         primary: '#7B8E89',
         secondary: '#6F7F7A',
+        accent: '#99ACA7',
       },
       maxWidth: {
         container: '90%',

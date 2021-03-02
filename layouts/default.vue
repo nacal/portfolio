@@ -42,7 +42,7 @@ html {
 
 .section {
   min-height: calc(100vh - 6rem);
-  @apply py-16 border-b border-secondary;
+  @apply py-16 w-full border-b border-secondary;
 }
 
 .flex-center {

@@ -14,6 +14,7 @@
     >
       <Nuxt />
     </main>
+    <Footer class="-mt-10" />
   </div>
 </template>
 
@@ -21,12 +22,14 @@
 import Header from '@/components/organisms/Header'
 import GlobalNav from '@/components/organisms/GlobalNav'
 import Overlay from '@/components/atoms/Overlay'
+import Footer from '@/components/organisms/Footer'
 
 export default {
   components: {
     Header,
     GlobalNav,
     Overlay,
+    Footer,
   },
 }
 </script>
@@ -53,6 +56,9 @@ html {
   height: calc(100vh - 6rem);
 }
 
+.min-h-main {
+  min-height: calc(100vh - 20rem);
+}
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.5s;

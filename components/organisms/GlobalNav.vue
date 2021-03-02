@@ -12,7 +12,9 @@
         class="text-center text-white text-2xl font-extralight hover:bg-secondary transition duration-500"
         @click="close()"
       >
-        <nuxt-link :to="'#' + item" class="block py-8">{{ item }}</nuxt-link>
+        <nuxt-link v-scroll-to="'#' + item" to class="block py-8">{{
+          item
+        }}</nuxt-link>
       </li>
     </ul>
   </nav>

@@ -41,6 +41,7 @@
     "stylelint-config-standard": "^20.0.0",
     "stylelint-prettier": "^1.2.0",
     "stylelint-scss": "^3.19.0",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
+    "vue-scrollto": "^2.20.0"
   }
 }

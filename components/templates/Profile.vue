@@ -1,7 +1,7 @@
 <template>
-  <section id="profile" class="section relative">
+  <section id="profile" class="section">
     <Title title="profile" />
-    <div class="w-full h-main flex flex-center absolute top-0">
+    <div class="flex flex-center min-h-main">
       <ProfileCard />
     </div>
   </section>

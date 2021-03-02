@@ -1,7 +1,7 @@
 <template>
   <section id="links" class="section relative">
     <Title title="links" />
-    <div class="w-full h-main flex flex-col flex-center absolute top-0">
+    <div class="flex flex-col flex-center min-h-main">
       <ul class="flex flex-col">
         <li v-for="(link, index) in links" :key="index" class="py-4">
           <a
@@ -22,6 +22,7 @@
           </a>
         </li>
       </ul>
+      <p class="mt-24 text-xl font-bold">Thanks for watching.</p>
     </div>
   </section>
 </template>

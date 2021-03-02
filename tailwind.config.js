@@ -14,6 +14,9 @@ module.exports = {
         primary: '#7B8E89',
         secondary: '#6F7F7A',
       },
+      maxWidth: {
+        container: '90%',
+      },
     },
   },
   variants: {

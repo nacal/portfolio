@@ -33,12 +33,12 @@ export default {
 
 <style lang="postcss">
 .container {
-  @apply mx-auto;
+  @apply mx-auto max-w-container;
 }
 
 .section {
   min-height: calc(100vh - 6rem);
-  @apply py-24 flex flex-col justify-center items-center text-center;
+  @apply py-16 border-b border-secondary;
 }
 
 .flex-center {

@@ -18,9 +18,9 @@
 </template>
 
 <script>
-import Header from '../components/layout/Header'
-import GlobalNav from '../components/layout/GlobalNav'
-import Overlay from '../components/layout/Overlay'
+import Header from '@/components/organisms/Header'
+import GlobalNav from '@/components/organisms/GlobalNav'
+import Overlay from '@/components/atoms/Overlay'
 
 export default {
   components: {

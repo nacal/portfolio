@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import Hamburger from '../Hamburger.vue'
+import Hamburger from '@/components/atoms/Hamburger'
 
 export default {
   components: { Hamburger },

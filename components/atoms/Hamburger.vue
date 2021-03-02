@@ -17,8 +17,8 @@
 
 <script>
 import { mapMutations } from 'vuex'
-import MenuIcon from '../components/icons/MenuIcon'
-import MenuCloseIcon from '../components/icons/MenuCloseIcon'
+import MenuIcon from '@/components/icons/MenuIcon'
+import MenuCloseIcon from '@/components/icons/MenuCloseIcon'
 
 export default {
   components: { MenuIcon, MenuCloseIcon },

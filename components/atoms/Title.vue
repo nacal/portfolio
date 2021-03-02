@@ -1,5 +1,5 @@
 <template>
-  <h1 :title="title" class="mx-auto flex flex-center">
+  <h1 :title="title" class="mx-auto mb-16 flex flex-center">
     <span class="text-2xl">{{ title }}</span>
   </h1>
 </template>

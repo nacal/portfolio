@@ -26,7 +26,7 @@ import { mapMutations } from 'vuex'
 export default {
   data() {
     return {
-      nav: ['profile', 'works', 'links', 'hoge'],
+      nav: ['profile', 'works', 'links'],
     }
   },
   methods: {

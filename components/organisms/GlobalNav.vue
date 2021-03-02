@@ -10,6 +10,7 @@
         v-for="(item, index) in nav"
         :key="index"
         class="text-center text-white text-2xl font-extralight hover:bg-secondary transition duration-500"
+        @click="close()"
       >
         <nuxt-link :to="'#' + item" class="block py-8">{{ item }}</nuxt-link>
       </li>
@@ -18,11 +19,18 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
+
 export default {
   data() {
     return {
       nav: ['profile', 'works', 'others', 'hoge'],
     }
+  },
+  methods: {
+    ...mapMutations({
+      close: 'close',
+    }),
   },
 }
 </script>

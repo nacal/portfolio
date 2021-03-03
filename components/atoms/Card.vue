@@ -1,31 +1,64 @@
 <template>
   <section class="w-96 max-w-full rounded shadow overflow-hidden my-2 mx-auto">
-    <img
-      class="w-full"
-      src="https://tailwindcss.com/img/card-top.jpg"
-      alt="Sunset in the mountains"
-    />
+    <img class="w-full" :src="image" alt="Sunset in the mountains" />
     <div class="px-6 py-4 bg-base">
-      <h1 class="font-bold text-xl mb-2">NKTech</h1>
-      <p class="text-secondary text-sm">JamStackな構成の高速なブログ</p>
+      <h1 class="font-bold text-xl mb-2">{{ title }}</h1>
+      <p class="text-secondary text-sm">{{ description }}</p>
     </div>
     <div class="px-6 py-4 bg-base text-sm flex flex-wrap">
-      <span class="mr-2">#Vue.js(Nuxt.js)</span>
-      <span class="mr-2">#Contentful</span>
-      <span class="mr-2">#Netlify</span>
-      <span class="mr-2">#Netlify</span>
-      <span class="mr-2">#Netlify</span>
-      <span>#Netlify</span>
+      <span v-for="(tag, index) in tags" :key="index" class="mr-4">{{
+        tag.tag
+      }}</span>
     </div>
-    <div class="bg-accent flex text-center">
-      <span class="w-1/2 h-full py-2 text-sm border-r border-secondary"
-        >Code</span
+    <div class="bg-base flex text-center shadow">
+      <p
+        v-if="githubLink != null"
+        class="w-1/2 h-full py-2 text-sm shadow hover:bg-accent transition duration-500"
       >
-      <span class="w-1/2 h-full py-2 text-sm">Visit</span>
+        <a :href="githubLink" class="block" target="blank">Code</a>
+      </p>
+      <p v-else class="w-1/2 h-full py-2 text-sm text-secondary shadow">Code</p>
+
+      <p
+        v-if="siteLink != null"
+        class="w-1/2 h-full py-2 text-sm shadow hover:bg-accent transition duration-500"
+      >
+        <a :href="siteLink" class="block" target="blank">Visit</a>
+      </p>
+      <p v-else class="w-1/2 h-full py-2 text-sm text-secondary shadow">
+        Visit
+      </p>
     </div>
   </section>
 </template>
 
 <script>
-export default {}
+export default {
+  props: {
+    title: {
+      type: String,
+      required: true,
+    },
+    description: {
+      type: String,
+      required: true,
+    },
+    tags: {
+      type: Array,
+      required: true,
+    },
+    image: {
+      type: String,
+      required: true,
+    },
+    githubLink: {
+      type: String,
+      required: true,
+    },
+    siteLink: {
+      type: String,
+      required: true,
+    },
+  },
+}
 </script>

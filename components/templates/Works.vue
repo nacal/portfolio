@@ -2,7 +2,16 @@
   <section id="works" class="section">
     <Title title="works" />
     <div class="grid gap-16 grid-col-fit max-w-full">
-      <Card v-for="card in 10" :key="card" />
+      <Card
+        v-for="(work, index) in works"
+        :key="index"
+        :title="work.title"
+        :description="work.description"
+        :tags="work.tags"
+        :image="work.image.url"
+        :github-link="work.githubLink"
+        :site-link="work.siteLink"
+      />
     </div>
   </section>
 </template>
@@ -15,6 +24,12 @@ export default {
   components: {
     Title,
     Card,
+  },
+  props: {
+    works: {
+      type: Array,
+      required: true,
+    },
   },
 }
 </script>

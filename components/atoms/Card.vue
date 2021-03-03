@@ -53,11 +53,11 @@ export default {
     },
     githubLink: {
       type: String,
-      required: true,
+      default: null,
     },
     siteLink: {
       type: String,
-      required: true,
+      default: null,
     },
   },
 }

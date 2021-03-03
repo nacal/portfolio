@@ -21,13 +21,10 @@ export default {
     Works,
     Links,
   },
-  async asyncData() {
-    const { data } = await axios.get(
-      'https://nkthkr-portfolio.microcms.io/api/v1/works',
-      {
-        headers: { 'X-API-KEY': '5afeda0e-860f-40ba-b45d-24135ef890ae' },
-      }
-    )
+  async asyncData(content) {
+    const { data } = await axios.get(content.env.URL, {
+      headers: { 'X-API-KEY': content.env.apiKey },
+    })
     return data
   },
 }

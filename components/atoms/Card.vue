@@ -1,7 +1,5 @@
 <template>
-  <section
-    class="w-96 max-w-full rounded overflow-hidden shadow-lg my-2 mx-auto"
-  >
+  <section class="w-96 max-w-full rounded shadow overflow-hidden my-2 mx-auto">
     <img
       class="w-full"
       src="https://tailwindcss.com/img/card-top.jpg"
@@ -19,7 +17,7 @@
       <span class="mr-2">#Netlify</span>
       <span>#Netlify</span>
     </div>
-    <div class="bg-accent flex text-center bg-accent">
+    <div class="bg-accent flex text-center">
       <span class="w-1/2 h-full py-2 text-sm border-r border-secondary"
         >Code</span
       >

@@ -1,6 +1,8 @@
 <template>
   <div class="mt-4 animate-scroll">
-    <ScrollDownIcon class="transform rotate-180" />
+    <nuxt-link v-scroll-to="'#hero'" to>
+      <ScrollDownIcon class="transform rotate-180 scale-75" />
+    </nuxt-link>
   </div>
 </template>
 

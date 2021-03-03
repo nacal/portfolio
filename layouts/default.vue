@@ -56,6 +56,14 @@ html {
   height: calc(100vh - 6rem);
 }
 
+.w-main {
+  width: 100%;
+
+  @media (min-width: 1024px) {
+    width: calc(100vw - 16rem);
+  }
+}
+
 .min-h-main {
   min-height: calc(100vh - 20rem);
 }

@@ -5,7 +5,7 @@
   >
     <h1 class="font-bold text-3xl">Hello World.</h1>
     <nuxt-link v-scroll-to="'#profile'" to>
-      <ScrollDown />
+      <ScrollDown role="button" aria-label="下向きの矢印" />
     </nuxt-link>
   </section>
 </template>

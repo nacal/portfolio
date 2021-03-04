@@ -23,7 +23,7 @@
         </li>
       </ul>
       <p class="mt-24 text-xl font-bold">Thanks for watching.</p>
-      <ScrollUp />
+      <ScrollUp role="button" aria-label="上向きの矢印" />
     </div>
   </section>
 </template>

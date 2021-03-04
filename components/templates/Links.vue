@@ -10,13 +10,13 @@
             class="flex hover:text-secondary transision duration-500"
           >
             <template v-if="link.title === 'Twitter'">
-              <TwitterIcon />
+              <TwitterIcon role="img" aria-label="Twitterのアイコン画像" />
             </template>
             <template v-else-if="link.title === 'GitHub'">
-              <GitHubIcon />
+              <GitHubIcon role="img" aria-label="GitHubのアイコン画像" />
             </template>
             <template v-else-if="link.title === 'NKTech'">
-              <NKTechIcon />
+              <NKTechIcon role="img" aria-label="NKTechのアイコン画像" />
             </template>
             <p class="ml-4">{{ link.alt }}</p>
           </a>

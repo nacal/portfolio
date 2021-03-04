@@ -18,6 +18,12 @@ module.exports = {
       maxWidth: {
         container: '90%',
       },
+      width: {
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1280px',
+      },
     },
   },
   variants: {

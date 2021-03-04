@@ -1,5 +1,5 @@
 <template>
-  <div :class="{ fadeIn: visible }">
+  <div :class="{ fadeIn: visible }" class="w-full">
     <slot v-show="visible"></slot>
   </div>
 </template>

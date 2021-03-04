@@ -6,7 +6,7 @@
       <img class="w-full h-56 object-cover" :src="image" :alt="alt" />
       <div class="px-6 py-4 bg-base">
         <h1 class="font-bold text-xl mb-2">{{ title }}</h1>
-        <p class="h-10 text-secondary text-sm">{{ description }}</p>
+        <p class="h-10 text-gray-600 text-sm">{{ description }}</p>
       </div>
       <div class="h-20 px-6 py-4 bg-base text-sm flex flex-wrap">
         <span v-for="(tag, index) in tags" :key="index" class="mr-4">{{

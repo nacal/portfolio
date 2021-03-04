@@ -19,6 +19,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import Header from '@/components/organisms/Header'
 import GlobalNav from '@/components/organisms/GlobalNav'
 import Overlay from '@/components/atoms/Overlay'
@@ -30,6 +31,34 @@ export default {
     GlobalNav,
     Overlay,
     Footer,
+  },
+  computed: {
+    ...mapGetters({
+      isOpen: 'isOpen',
+    }),
+  },
+  watch: {
+    isOpen: {
+      handler() {
+        if (this.isOpen === true) {
+          document.body.classList.add('overflow-y-hidden')
+          document.addEventListener('touchmove', this.handleTouchMove, {
+            passive: false,
+          })
+        } else {
+          document.body.classList.remove('overflow-y-hidden')
+          document.removeEventListener('touchmove', this.handleTouchMove, {
+            passive: false,
+          })
+        }
+      },
+      deep: true,
+    },
+  },
+  methods: {
+    handleTouchMove(event) {
+      event.preventDefault()
+    },
   },
 }
 </script>

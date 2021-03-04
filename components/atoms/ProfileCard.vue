@@ -1,7 +1,7 @@
 <template>
   <FadeIn>
     <div
-      class="max-w-full mx-auto bg-gray-800 shadow-2xl rounded-lg overflow-hidden sm:pr-16"
+      class="max-w-full sm:w-sm mx-auto bg-gray-800 shadow-2xl rounded-lg overflow-hidden"
     >
       <div class="py-3 px-4 flex">
         <div class="rounded-full w-3 h-3 bg-red-500 mr-2"></div>
@@ -41,10 +41,28 @@
         </div>
 
         <div class="mb-2 ml-4 md:ml-8">
-          <span class="text-blue-300">Skill</span>
+          <span class="text-blue-300">Skills</span>
           <span class="mr-2">:</span>
+          <span>[</span>
+        </div>
+
+        <div class="mb-2 ml-6 md:ml-12">
           <span class="text-green-300">' Frontend '</span>
-          <span>,</span>
+          <span class="mr-2">,</span>
+        </div>
+
+        <div class="mb-2 ml-6 md:ml-12">
+          <span class="text-green-300">' UI / UX '</span>
+          <span class="mr-2">,</span>
+        </div>
+
+        <div class="mb-2 ml-6 md:ml-12">
+          <span class="text-green-300">' Web Accessibility '</span>
+          <span class="mr-2">,</span>
+        </div>
+
+        <div class="mb-2 ml-4 md:ml-8">
+          <span>] ,</span>
         </div>
 
         <div class="mb-2 ml-2 md:ml-4">
@@ -61,6 +79,7 @@
 
 <script>
 import FadeIn from '@/components/atoms/FadeIn'
+
 export default {
   components: {
     FadeIn,

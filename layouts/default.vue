@@ -9,7 +9,6 @@
       <Overlay v-if="this.$store.state.isOpen" class="z-10" />
     </transition>
     <main
-      id="main"
       class="mt-24 lg:mr-64 transition duration-500"
       :class="{ 'overflow-hidden': this.$store.state.isOpen }"
     >
@@ -43,12 +42,12 @@ export default {
       handler() {
         if (this.isOpen === true) {
           document.body.classList.add('overflow-y-hidden')
-          document.addEventListener('touchmove', this.handleTouchMove, {
+          document.main.addEventListener('touchmove', this.handleTouchMove, {
             passive: false,
           })
         } else {
           document.body.classList.remove('overflow-y-hidden')
-          document.removeEventListener('touchmove', this.handleTouchMove, {
+          document.main.removeEventListener('touchmove', this.handleTouchMove, {
             passive: false,
           })
         }

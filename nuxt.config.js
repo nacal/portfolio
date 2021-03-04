@@ -23,7 +23,11 @@ export default {
         content: 'nkthkr portfolio',
       },
       { hid: 'og:type', property: 'og:type', content: 'website' },
-      { hid: 'og:url', property: 'og:url', content: 'サイトのURL' },
+      {
+        hid: 'og:url',
+        property: 'og:url',
+        content: 'https://portfolio-nkthkr.vercel.app',
+      },
       { hid: 'og:title', property: 'og:title', content: 'nkthkr portfolio' },
       {
         hid: 'og:description',
@@ -33,7 +37,7 @@ export default {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: '/portfolio-card.png',
+        content: 'https://portfolio-nkthkr.vercel.app/portfolio-card.png',
       },
       { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'msapplication-TileColor', content: '#99b5ad' },

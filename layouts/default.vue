@@ -49,7 +49,8 @@ body {
 
 .section {
   min-height: calc(100vh - 6rem);
-  @apply py-16 w-full border-b border-secondary;
+  min-height: calc(calc(var(--vh, 1vh) * 100) - 6rem);
+  @apply py-8 lg:py-16 w-full border-b border-secondary;
 }
 
 .flex-center {
@@ -58,6 +59,7 @@ body {
 
 .h-main {
   height: calc(100vh - 6rem);
+  height: calc(calc(var(--vh, 1vh) * 100) - 6rem);
 }
 
 .w-main {
@@ -70,6 +72,7 @@ body {
 
 .min-h-main {
   min-height: calc(100vh - 20rem);
+  min-height: calc(calc(var(--vh, 1vh) * 100) - 20rem);
 }
 .fade-enter-active,
 .fade-leave-active {

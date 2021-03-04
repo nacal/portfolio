@@ -39,6 +39,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  background-color: #7b8e89;
+}
+
 .container {
   @apply mx-auto max-w-container;
 }

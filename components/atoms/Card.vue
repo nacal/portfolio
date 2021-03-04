@@ -1,10 +1,6 @@
 <template>
   <section class="w-96 max-w-full rounded shadow overflow-hidden my-2 mx-auto">
-    <img
-      class="w-full h-56 object-cover"
-      :src="image"
-      alt="Sunset in the mountains"
-    />
+    <img class="w-full h-56 object-cover" :src="image" :alt="alt" />
     <div class="px-6 py-4 bg-base">
       <h1 class="font-bold text-xl mb-2">{{ title }}</h1>
       <p class="h-10 text-secondary text-sm">{{ description }}</p>
@@ -52,6 +48,10 @@ export default {
       required: true,
     },
     image: {
+      type: String,
+      required: true,
+    },
+    alt: {
       type: String,
       required: true,
     },

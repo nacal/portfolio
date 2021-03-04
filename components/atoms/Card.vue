@@ -1,11 +1,15 @@
 <template>
   <section class="w-96 max-w-full rounded shadow overflow-hidden my-2 mx-auto">
-    <img class="w-full" :src="image" alt="Sunset in the mountains" />
+    <img
+      class="w-full h-56 object-cover"
+      :src="image"
+      alt="Sunset in the mountains"
+    />
     <div class="px-6 py-4 bg-base">
       <h1 class="font-bold text-xl mb-2">{{ title }}</h1>
-      <p class="text-secondary text-sm">{{ description }}</p>
+      <p class="h-10 text-secondary text-sm">{{ description }}</p>
     </div>
-    <div class="px-6 py-4 bg-base text-sm flex flex-wrap">
+    <div class="h-20 px-6 py-4 bg-base text-sm flex flex-wrap">
       <span v-for="(tag, index) in tags" :key="index" class="mr-4">{{
         tag.tag
       }}</span>

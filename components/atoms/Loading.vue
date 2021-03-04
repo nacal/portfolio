@@ -37,6 +37,10 @@ export default {
 <style scoped>
 .loading-leave-active {
   animation: loading 3s;
+
+  @media (min-width: 1024px) {
+    animation: lg-loading 3s;
+  }
 }
 
 .loading-title-enter-active,
@@ -50,6 +54,25 @@ export default {
 }
 
 @keyframes loading {
+  0% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  33% {
+    opacity: 1;
+    transform: translate3d(0, 6rem, 0);
+  }
+  66% {
+    opacity: 1;
+    transform: translate3d(0, 6rem, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(0, 6rem, 0);
+  }
+}
+
+@keyframes lg-loading {
   0% {
     opacity: 1;
     transform: translate3d(0, 0, 0);

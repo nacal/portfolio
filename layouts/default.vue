@@ -26,19 +26,12 @@ import GlobalNav from '@/components/organisms/GlobalNav'
 import Overlay from '@/components/atoms/Overlay'
 import Footer from '@/components/organisms/Footer'
 
-// const main = document.getElementById('main')
-
 export default {
   components: {
     Header,
     GlobalNav,
     Overlay,
     Footer,
-  },
-  data() {
-    return {
-      scrollTop: 0,
-    }
   },
   computed: {
     ...mapGetters({
@@ -50,33 +43,20 @@ export default {
       handler() {
         if (this.isOpen === true) {
           document.body.classList.add('overflow-y-hidden')
-          document
-            .getElementById('main')
-            .addEventListener('touchmove', this.handleTouchMove, {
-              passive: false,
-            })
+          document.addEventListener('touchmove', this.handleTouchMove, {
+            passive: false,
+          })
         } else {
           document.body.classList.remove('overflow-y-hidden')
-          document
-            .getElementById('main')
-            .removeEventListener('touchmove', this.handleTouchMove, {
-              passive: false,
-            })
+          document.removeEventListener('touchmove', this.handleTouchMove, {
+            passive: false,
+          })
         }
       },
       deep: true,
     },
   },
-  mounted() {
-    window.addEventListener('scroll', this.handleScroll)
-  },
-  beforeDestroy() {
-    window.removeEventListener('scroll', this.handleScroll)
-  },
   methods: {
-    handleScroll() {
-      this.scrollTop = document.documentElement.scrollTop
-    },
     handleTouchMove(event) {
       event.preventDefault()
     },

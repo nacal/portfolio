@@ -9,6 +9,7 @@
         :description="work.description"
         :tags="work.tags"
         :image="work.image.url"
+        :alt="work.imageAlt"
         :github-link="work.githubLink"
         :site-link="work.siteLink"
       />

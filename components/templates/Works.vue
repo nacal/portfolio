@@ -37,6 +37,6 @@ export default {
 
 <style lang="postcss" scoped>
 .grid-col-fit {
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 </style>

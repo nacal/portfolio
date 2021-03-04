@@ -120,4 +120,6 @@ export default {
     apiKey: process.env.API_KEY,
     URL: process.env.URL,
   },
+
+  loading: '~/components/atoms/Loading.vue',
 }

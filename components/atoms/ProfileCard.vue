@@ -61,6 +61,10 @@
           <span class="mr-2">,</span>
         </div>
 
+        <div class="mb-2 ml-4 md:ml-8">
+          <span>] ,</span>
+        </div>
+
         <div class="mb-2 ml-2 md:ml-4">
           <span>}</span>
         </div>
@@ -75,25 +79,10 @@
 
 <script>
 import FadeIn from '@/components/atoms/FadeIn'
+
 export default {
   components: {
     FadeIn,
-  },
-  data() {
-    return {
-      charas: [
-        'test',
-        'test',
-        'test',
-        'test',
-        'test',
-        'test',
-        'test',
-        'test',
-        'test',
-        'test',
-      ],
-    }
   },
 }
 </script>

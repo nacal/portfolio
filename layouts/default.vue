@@ -9,6 +9,7 @@
       <Overlay v-if="this.$store.state.isOpen" class="z-10" />
     </transition>
     <main
+      id="main"
       class="mt-24 lg:mr-64 transition duration-500"
       :class="{ 'overflow-hidden': this.$store.state.isOpen }"
     >
@@ -19,10 +20,13 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import Header from '@/components/organisms/Header'
 import GlobalNav from '@/components/organisms/GlobalNav'
 import Overlay from '@/components/atoms/Overlay'
 import Footer from '@/components/organisms/Footer'
+
+// const main = document.getElementById('main')
 
 export default {
   components: {
@@ -30,6 +34,52 @@ export default {
     GlobalNav,
     Overlay,
     Footer,
+  },
+  data() {
+    return {
+      scrollTop: 0,
+    }
+  },
+  computed: {
+    ...mapGetters({
+      isOpen: 'isOpen',
+    }),
+  },
+  watch: {
+    isOpen: {
+      handler() {
+        if (this.isOpen === true) {
+          document.body.classList.add('overflow-y-hidden')
+          document
+            .getElementById('main')
+            .addEventListener('touchmove', this.handleTouchMove, {
+              passive: false,
+            })
+        } else {
+          document.body.classList.remove('overflow-y-hidden')
+          document
+            .getElementById('main')
+            .removeEventListener('touchmove', this.handleTouchMove, {
+              passive: false,
+            })
+        }
+      },
+      deep: true,
+    },
+  },
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll)
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll)
+  },
+  methods: {
+    handleScroll() {
+      this.scrollTop = document.documentElement.scrollTop
+    },
+    handleTouchMove(event) {
+      event.preventDefault()
+    },
   },
 }
 </script>

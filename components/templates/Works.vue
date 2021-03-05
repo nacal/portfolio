@@ -1,7 +1,7 @@
 <template>
   <section id="works" class="section">
     <Title title="works" />
-    <div class="grid gap-16 grid-col-fit max-w-full">
+    <div class="grid gap-24 grid-col-fit max-w-full">
       <Card
         v-for="(work, index) in works"
         :key="index"

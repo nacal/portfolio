@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-base">
+  <div class="bg-base" role="application">
     <Header class="z-20" />
     <GlobalNav
       class="transform lg:translate-x-0 transition duration-500 z-20"

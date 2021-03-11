@@ -1,10 +1,10 @@
 <template>
-  <div class="container">
+  <article class="container">
     <Hero />
     <Profile />
     <Works :works="contents" />
     <Links />
-  </div>
+  </article>
 </template>
 
 <script>

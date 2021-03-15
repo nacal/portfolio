@@ -1,20 +1,17 @@
-# portfolio
+# Portfolio
 
-## Build Setup
+[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
 
-```bash
-# install dependencies
-$ yarn install
+![SpotiClock image](https://user-images.githubusercontent.com/55532835/111150317-48255f80-85d1-11eb-9113-38c981dec843.png)
 
-# serve with hot reload at localhost:3000
-$ yarn dev
+> [Portfolio](https://portfolio-nkthkr.vercel.app/)
 
-# build for production and launch server
-$ yarn build
-$ yarn start
+## Overview
 
-# generate static project
-$ yarn generate
-```
+自己紹介用ポートフォリオ
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+## Assets
+- [Vue.js](https://vuejs.org/)
+  - [Nuxt.js](https://nuxtjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Vercel](https://app.netlify.com/)
